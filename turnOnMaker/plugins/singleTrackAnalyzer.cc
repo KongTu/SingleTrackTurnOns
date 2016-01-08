@@ -321,7 +321,8 @@ singleTrackAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
             } 
           }
 
-          if((trk.pt()-reso_*trk.ptError())*TMath::CosH( trk.eta() )>15 && (trk.pt()-reso_*trk.ptError())*TMath::CosH( trk.eta() ) > hcalEnergy+ecalEnergy ) continue; //Calo Matching
+          //if((trk.pt()-reso_*trk.ptError())*TMath::CosH( trk.eta() )>15 && (trk.pt()-reso_*trk.ptError())*TMath::CosH( trk.eta() ) > hcalEnergy+ecalEnergy ) continue; //Calo Matching
+            if( (hcalEnergy+ecalEnergy)/( trk.pt()*TMath::CosH(trk.eta() ) ) < reso_ ) continue;// simple Calo matching
             matched++;
             if( trk.pt() > maxPt ) maxPt = trk.pt();//looking for leading pT track
         }
