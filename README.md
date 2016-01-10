@@ -11,7 +11,7 @@ STEPS:
 - Checkout at least 75X, and git clone this repo <pre><code> git clone https://github.com/KongTu/SingleTrackTurnOns.git </code></pre>
 - Compile. <pre><code> scram b -j4 </code></pre>
 - Go to /SingleTrackTurnOns/turnOnMaker/test, and replace the input file name, double check the track quality cuts and calo matching resolution parameter, before you do: <pre><code> cmsRun HLTandL1singletrack_crab_cfg.py </code></pre>
-- One can use <strong> /macros/L1plusHLTSingleTrackTurnOns.C </strong> to plot efficiency as function of $p_{T}$.
+- One can use <strong> /macros/L1plusHLTSingleTrackTurnOns.C </strong> to plot efficiency as function of pT.
 
 
 
