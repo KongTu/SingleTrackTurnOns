@@ -12,7 +12,7 @@ process.ana_PbPb = cms.EDAnalyzer('singleTrackAnalyzer',
  
 				  doCaloMatched = cms.untracked.bool(True),
 				  
-				  reso = cms.untracked.double(2.0),#2.0	
+				  reso = cms.untracked.double(0.2),#0.2	
 				  offlineDCA = cms.untracked.double(3.0),#3.0
 				  offlineChi2 = cms.untracked.double(0.15),#0.15
 				  offlineptErr = cms.untracked.double(0.1),#0.05
@@ -44,7 +44,9 @@ process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32( 1000 ) )
 
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(
-'root://cmsxrootd.fnal.gov//store/user/qwang/HIHardProbes/HIHardProbes_FullTrackSkim2015_v3/151216_192437/0000/FullTrack_10.root'
+#'root://xrootd3.cmsaf.mit.edu//store/user/qwang/HIHardProbes/HIHardProbes_FullTrackSkim2015_v3/151216_192437/0000/FullTrack_1.root'
+#'root://xrootd3.cmsaf.mit.edu//store/user/qwang/HIHardProbes/HIHardProbes_FullTrackSkim2015_v3/151216_192437/0000/FullTrack_10.root'
+'/store/user/qwang/HIHardProbes/HIHardProbes_FullTrackSkim2015_v3/151216_192437/0000/FullTrack_100.root'
 ))
 
 import HLTrigger.HLTfilters.hltHighLevel_cfi
