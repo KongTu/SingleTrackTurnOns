@@ -12,7 +12,7 @@ process.ana_PbPb = cms.EDAnalyzer('singleTrackAnalyzer',
  
 				  doCaloMatched = cms.untracked.bool(True),
 				  
-				  reso = cms.untracked.double(0.2),#0.2	
+				  reso = cms.untracked.double(0.5),#0.2	
 				  offlineDCA = cms.untracked.double(3.0),#3.0
 				  offlineChi2 = cms.untracked.double(0.15),#0.15
 				  offlineptErr = cms.untracked.double(0.1),#0.05
@@ -40,7 +40,7 @@ process.load('Configuration.StandardSequences.EndOfProcess_cff')
 
 process.options   = cms.untracked.PSet( wantSummary =
 cms.untracked.bool(True) )
-process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32( 1000 ) )
+process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32( -1 ) )
 
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(
