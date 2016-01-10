@@ -10,7 +10,7 @@ void L1plusHLTSingleTrackTurnOns(){
 
 	TFile * file[3];
 	// MinBias L1 + HLT SingleTrack for PbPb:
-	file[0] = new TFile("../rootfiles/PbPb_SingleTrackTurnOns_v2.root");
+	file[0] = new TFile("../rootfiles/PbPb_SingleTrackTurnOns_v6.root");
 
 	TH1D* allEvents1;
 	TH1D* allEvents2;
