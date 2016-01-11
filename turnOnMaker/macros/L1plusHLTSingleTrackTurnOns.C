@@ -4,13 +4,12 @@ using namespace std;
 
 void L1plusHLTSingleTrackTurnOns(){
 
-
-
-	TH1D* hist = makeHist("hist","", "p_{T} (GeV)", "Efficiency", 100,0,100);
+	TH1D* hist = makeHist("hist","","p_{T} (GeV)", "Efficiency", 100,0,100);
+	hist->GetXaxis()->SetTitleColor(kBlack);
 
 	TFile * file[3];
 	// MinBias L1 + HLT SingleTrack for PbPb:
-	file[0] = new TFile("../rootfiles/PbPb_SingleTrackTurnOns_v6.root");
+	file[0] = new TFile("../rootfiles/PbPb_SingleTrackTurnOns_v7.root");
 
 	TH1D* allEvents1;
 	TH1D* allEvents2;
@@ -61,8 +60,8 @@ void L1plusHLTSingleTrackTurnOns(){
     w1->AddEntry(gr[4],"L1 + HLT SingleTrack 45","P");
     w1->Draw("");
 
-	// c2->SaveAs("../files/triggerEfficiency.png");
- // 	c2->SaveAs("../files/triggerEfficiency.pdf");
+	c2->SaveAs("../files/triggerEfficiency_v7.png");
+ 	c2->SaveAs("../files/triggerEfficiency_v7.pdf");
 
 
 
