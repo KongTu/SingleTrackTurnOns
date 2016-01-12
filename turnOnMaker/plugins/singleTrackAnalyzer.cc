@@ -325,7 +325,7 @@ singleTrackAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iS
             if( (trk.pt() < 20) || ((hcalEnergy+ecalEnergy)/( trk.pt()*TMath::CosH(trk.eta() ) ) > reso_ && (hcalEnergy+ecalEnergy)/(TMath::CosH(trk.eta())) > (trk.pt() - 80.0)) ) {// simple Calo matching
             matched++;
             if( trk.pt() > maxPt ) maxPt = trk.pt();//looking for leading pT track
-	    }
+            }
         }
         else{
             if( trk.pt() > maxPt ) maxPt = trk.pt();//looking for leading pT track
